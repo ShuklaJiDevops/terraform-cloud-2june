@@ -1,6 +1,6 @@
 
 resource "aws_iam_user" "user" {
-  name  = "demo-user.${count.index}"
+  name  = "tf-user.${count.index}"
   count = 3
   path  = "/system/"
 }
