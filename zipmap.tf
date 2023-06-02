@@ -6,13 +6,13 @@ resource "aws_iam_user" "iam_user" {
 }
 
 output "name" {
-  value = aws_iam_user.lb[*].name
+  value = aws_iam_user.iam_user[*].name
 }
 
 output "arns" {
-    value = aws_iam_user.lb[*].arn
+    value = aws_iam_user.iam_user[*].arn
 }
 
 output "zipmap" {
-    value = zipmap (aws_iam_user.lb[*].name, aws_iam_user.lb[*].arn)
+    value = zipmap (aws_iam_user.iam_user[*].name, aws_iam_user.iam_user[*].arn)
 }
